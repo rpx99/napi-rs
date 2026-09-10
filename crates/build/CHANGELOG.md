@@ -7,6 +7,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.5.0](https://github.com/napi-rs/napi-rs/compare/napi-build-v2.4.2...napi-build-v2.5.0) - 2026-09-10
+
+### Added
+
+- *(cli)* support non-threaded WASI targets ([#3353](https://github.com/napi-rs/napi-rs/pull/3353))
+- *(sys)* use libloading to load napi symbols at runtime on all platform ([#2996](https://github.com/napi-rs/napi-rs/pull/2996))
+
+### Fixed
+
+- *(cli,build)* make wasm32-wasip1-threads link with wasi-sdk 34 and Rust nightly ([#3492](https://github.com/napi-rs/napi-rs/pull/3492))
+- *(napi)* stop unloading addons with live native code, preserve non-Error rejections, and add the wasm teardown barrier ([#3423](https://github.com/napi-rs/napi-rs/pull/3423))
+- *(build)* on openbsd, work around local thread storage destructor crash after DSO unloading using '-z, nodelete' linker flag ([#3274](https://github.com/napi-rs/napi-rs/pull/3274))
+- *(build)* add back undefined symbols lookup behavior ([#3015](https://github.com/napi-rs/napi-rs/pull/3015))
+- *(build)* export `emnapi_thread_crashed` ([#2920](https://github.com/napi-rs/napi-rs/pull/2920))
+- *(build)* increase wasi stack size ([#2748](https://github.com/napi-rs/napi-rs/pull/2748))
+- *(napi-build)* compatible with v2
+
+### Other
+
+- release ([#3470](https://github.com/napi-rs/napi-rs/pull/3470))
+- release ([#3448](https://github.com/napi-rs/napi-rs/pull/3448))
+- release ([#3414](https://github.com/napi-rs/napi-rs/pull/3414))
+- release ([#3272](https://github.com/napi-rs/napi-rs/pull/3272))
+- release ([#3009](https://github.com/napi-rs/napi-rs/pull/3009))
+- release ([#2977](https://github.com/napi-rs/napi-rs/pull/2977))
+- release ([#2913](https://github.com/napi-rs/napi-rs/pull/2913))
+- *(napi)* bump rust-version ([#2966](https://github.com/napi-rs/napi-rs/pull/2966))
+- release ([#2805](https://github.com/napi-rs/napi-rs/pull/2805))
+- *(cli)* setjmp link path ([#2808](https://github.com/napi-rs/napi-rs/pull/2808))
+- pin release-plz action
+- Release independent packages
+- Release independent packages
+
 ## [2.4.2](https://github.com/napi-rs/napi-rs/compare/napi-build-v2.4.1...napi-build-v2.4.2) - 2026-09-10
 
 ### Fixed
